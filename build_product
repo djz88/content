@@ -319,6 +319,7 @@ all_cmake_products=(
 	RHV4
 	SLE12
 	SLE15
+	SLM5
 	UBUNTU1604
 	UBUNTU1804
 	UBUNTU2004
@@ -386,7 +387,7 @@ set -e
 rm -rf build/*
 cd build
 cmake .. "${CMAKE_OPTIONS[@]}"
-$build_command "-j${jobs}" "${EXPLICIT_BUILD_TARGETS[@]}"
+$build_command --verbose "-j${jobs}" "${EXPLICIT_BUILD_TARGETS[@]}"
 
 if test "$_arg_profiling" = on; then
 	# remove cycles in ninja logs

@@ -54,6 +54,7 @@ product_directories = [
     'rhel7', 'rhel8', 'rhel9',
     'rhv4',
     'sle12', 'sle15',
+    'slm5'
     'ubuntu1604', 'ubuntu1804', 'ubuntu2004',
     'vsel',
     'wrlinux8', 'wrlinux1019'
@@ -217,6 +218,7 @@ FULL_NAME_TO_PRODUCT_MAPPING = {
     "Red Hat Virtualization 4": "rhv4",
     "SUSE Linux Enterprise 12": "sle12",
     "SUSE Linux Enterprise 15": "sle15",
+    "SUSE Linux Micro 5": "slm5",
     "Ubuntu 16.04": "ubuntu1604",
     "Ubuntu 18.04": "ubuntu1804",
     "Ubuntu 20.04": "ubuntu2004",
@@ -260,7 +262,7 @@ REFERENCES = dict(
 
 
 MULTI_PLATFORM_LIST = ["rhel", "fedora", "rhv", "debian", "ubuntu",
-                       "wrlinux", "opensuse", "sle", "ol", "ocp", "rhcos",
+                       "wrlinux", "opensuse", "sle", "slm", "ol", "ocp", "rhcos",
                        "example", "eks"]
 
 MULTI_PLATFORM_MAPPING = {
@@ -274,7 +276,8 @@ MULTI_PLATFORM_MAPPING = {
     "multi_platform_rhcos": ["rhcos4"],
     "multi_platform_rhel": ["rhel7", "rhel8", "rhel9"],
     "multi_platform_rhv": ["rhv4"],
-    "multi_platform_sle": ["sle12", "sle15"],
+    "multi_platform_sle": ["sle12", "sle15", "slm5"],
+    "multi_platform_slm": ["slm5"],
     "multi_platform_ubuntu": ["ubuntu1604", "ubuntu1804", "ubuntu2004"],
     "multi_platform_wrlinux": ["wrlinux8", "wrlinux1019"],
 }
@@ -441,6 +444,7 @@ MAKEFILE_ID_TO_PRODUCT_MAP = {
     'fuse': 'JBoss Fuse',
     'opensuse': 'openSUSE',
     'sle': 'SUSE Linux Enterprise',
+    'slm': 'SUSE Linux Micro',
     'vsel': 'McAfee VirusScan Enterprise for Linux',
     'wrlinux': 'WRLinux',
     'example': 'Example',
