@@ -387,7 +387,7 @@ set -e
 rm -rf build/*
 cd build
 cmake .. "${CMAKE_OPTIONS[@]}"
-$build_command --verbose "-j${jobs}" "${EXPLICIT_BUILD_TARGETS[@]}"
+$build_command "-j${jobs}" "${EXPLICIT_BUILD_TARGETS[@]}"
 
 if test "$_arg_profiling" = on; then
 	# remove cycles in ninja logs
